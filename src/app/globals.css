@@ -1,26 +1,97 @@
 @import "tailwindcss";
-
+  
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --color-primary: #7c3aed;
+  --color-primaryHover: #6d28d9;
+  --color-primaryLight: #a78bfa;
+  --color-primaryDark: #4c1d95;
+  --color-background: #fff;
+  --color-backgroundAlt: #ede9fe;
+  --color-text: #171717;
+  --color-textAlt: #6d28d9;
+  --color-textLight: #fff;
+  --color-textDark: #171717;
+  --color-border: #e5e7eb;
+  --color-glass: rgba(237, 233, 254, 0.6);
+  --color-glassBorder: rgba(226, 232, 240, 0.25);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --color-primary: #a78bfa;
+  --color-primaryHover: #7c3aed;
+  --color-primaryLight: #c4b5fd;
+  --color-primaryDark: #4c1d95;
+  --color-background: #18181b;
+  --color-backgroundAlt: #312e81;
+  --color-text: #ededed;
+  --color-textAlt: #a78bfa;
+  --color-textLight: #fff;
+  --color-textDark: #171717;
+  --color-border: #27272a;
+  --color-glass: rgba(49, 46, 129, 0.6);
+  --color-glassBorder: rgba(39, 39, 42, 0.25);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  overflow-x: hidden;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100vw;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.bg-theme {
+  background-color: var(--color-background);
+}
+
+.bg-theme-alt {
+  background-color: var(--color-backgroundAlt);
+}
+
+.bg-theme-light {
+  background-color: var(--color-primaryLight);
+}
+
+.bg-theme-dark {
+  background-color: var(--color-primaryDark);
+}
+
+.bg-theme-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-theme-text {
+  background-color: var(--color-text);
+}
+
+.text-theme {
+  color: var(--color-text);
+}
+
+.text-theme-alt {
+  color: var(--color-textAlt);
+}
+
+.text-theme-primary {
+  color: var(--color-primary);
+}
+
+.text-theme-light {
+  color: var(--color-textLight);
+}
+
+.text-theme-dark {
+  color: var(--color-textDark);
 }
